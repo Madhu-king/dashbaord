@@ -1,0 +1,27 @@
+/* Write your CSS here */
+.bg-container {
+ 
+  background-image: url('https://assets.ccbp.in/frontend/react-js/ipl-dashboard-lg-bg.png');
+  background-size: cover;
+}
+.logo-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.logo-cricket {
+  height: 70px;
+  width: 70px;
+  margin: 40px;
+}
+.heading {
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+}
+.unorder-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

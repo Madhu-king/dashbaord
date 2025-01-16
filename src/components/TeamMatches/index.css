@@ -1,0 +1,20 @@
+/* Write your CSS here */
+.teammatch-container {
+  height: 1200px;
+  background-color: red;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.image-size {
+  height: 300px;
+  width: 1000px;
+  border: 1px solid black;
+  margin-top: 30px;
+}

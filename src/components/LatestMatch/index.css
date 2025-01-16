@@ -1,0 +1,35 @@
+/* Write your CSS here */
+.final {
+  margin-bottom: 10px;
+}
+.LatestMatch-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.heading-1 {
+  color: white;
+  text-align: start;
+  padding-left: 30px;
+}
+.card-container {
+  height: 300px;
+  width: 1000px;
+  border: 3px solid yellow;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.size {
+  height: 200px;
+  width: 300px;
+}
+.text-container {
+  margin-top: 20px;
+}
+.image-container {
+  margin-top: 20px;
+}
+.container-text-end {
+  margin-top: 20px;
+}

@@ -1,0 +1,23 @@
+/* Write your CSS here */
+.cards-container {
+  margin-top: 20px;
+  height: 500px;
+  width: 1000px;
+  border: 1px solid blue;
+  
+}
+.size-logo{
+  margin-top: 10px;
+  height: 200px;
+  width: 200px;
+}
+
+.each-card-container {
+  margin: 20px;
+  height: 400px;
+  width: 300px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
