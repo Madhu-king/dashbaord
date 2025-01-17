@@ -30,19 +30,18 @@ class TeamMatches extends Component {
     venue: data.venue,
   })
 
-  recentMatchformat = data => ({
-    umpires: data.umpires,
-    result: data.result,
-    manOfMatch: data.man_of_the_match,
-    id: data.id,
-    competingTeam: data.competing_team,
-    competingTeamLogo: data.competing_team_logo,
-    date: data.date,
-    firstInnings: data.first_innings,
-    manOfTheMatch: data.man_of_the_match,
-    matchStatus: data.match_status,
-    secondInnings: data.second_innings,
-    venue: data.venue,
+  recentFormat = each => ({
+    competingTeam: each.competing_team,
+    competingTeamLogo: each.competing_team_logo,
+    date: each.data,
+    firstInnings: each.first_innings,
+    id: each.id,
+    manOfTheMatch: each.man_of_the_match,
+    matchStatus: each.match_status,
+    result: each.result,
+    secondInnings: each.second_innings,
+    umpires: each.umpires,
+    venue: each.venue,
   })
 
   getClickedData = async () => {
@@ -52,10 +51,11 @@ class TeamMatches extends Component {
     const {id} = params
     const response = await fetch(`${url}${id}`)
     const data = await response.json()
-
+    console.log(data)
     const formated = {
       teamBannerUrl: data.team_banner_url,
       latestMatchDetails: this.latestFormat(data.latest_match_details),
+      matchCard: data.recent_matches.map(each => this.recentFormat(each)),
     }
 
     this.setState({teamData: formated})
@@ -63,9 +63,9 @@ class TeamMatches extends Component {
 
   render() {
     const {teamData} = this.state
-    const {latestMatchDetails, teamBannerUrl} = teamData
-    
-    console.log(latestMatchDetails)
+
+    const {latestMatchDetails, teamBannerUrl, matchCard} = teamData
+    console.log(matchCard)
 
     return (
       <div className="teammatch-container">
@@ -74,8 +74,12 @@ class TeamMatches extends Component {
         </div>
         <div>
           <LatestMatch details={latestMatchDetails} />
-          <MatchCard />
         </div>
+        <ul>
+          {matchCard.map(eachobje => (
+            <MatchCard recentdetails={eachobje} key={eachobje.id} />
+          ))}
+        </ul>
       </div>
     )
   }

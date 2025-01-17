@@ -2,7 +2,8 @@
 
 import './index.css'
 
-const MatchCard = () => {
+const MatchCard = props => {
+  console.log(props)
   return (
     <div className="cards-container">
       <div className="each-card-container">
@@ -10,9 +11,8 @@ const MatchCard = () => {
           src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/todolistbg.png"
           className="size-logo"
         />
-        <p>Sunraisehyderbad</p>
-        <p>34545fgdfhh</p>
-        <p>Lost</p>
+        <p>hii</p>
+        <p>bye</p>
       </div>
     </div>
   )
